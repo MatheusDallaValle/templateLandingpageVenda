@@ -1,0 +1,402 @@
+
+/*fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+header{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    width: auto;
+    height: 80px;
+    background-color: #fff;
+}
+header .containerHeader{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo img{
+    height: 80px;
+    transition: 0.5s;
+}
+header .logo img:hover{
+    transform: scale(1.05);
+}
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+header nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+header nav a:hover{
+    transform: scale(1.1);
+    color: #0066FF;
+}
+
+header .botaocta a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    color: black;
+    text-decoration: none;
+    background-color: #0066FF;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    transition: 0.3s;
+}
+header .botaocta a:hover{
+    transform: scale(1.05);
+    color: #000;
+}
+
+main .inicio{
+    padding: 5rem 0px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #EEF4FE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerInicio{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.containerInicio .containerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+.containerInicio .containerText h1{
+    font-size: 3rem;
+    font-weight: 900;
+}
+.containerInicio .containerText h2{
+    font-size: 1.13rem;
+    font-weight: 400;
+}
+main .inicio .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .inicio .buttons a{
+    display: flex;
+    align-items: center;
+    width: 15rem;
+    height: 3rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+main .inicio .buttons #button1{
+    background-color: #0066FF;
+    color: #fff;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+main .inicio .buttons #button1:hover{
+    background-color: #00317a;
+    color: #fff;
+    transform: scale(1.05);
+}
+main .inicio .buttons #button2{
+    background-color: #FFFFFF;
+    color: #0A2540;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+}
+main .inicio .buttons #button2:hover{
+    background-color: #8d8d8d;
+    color: #0A2540;
+    transform: scale(1.05);
+}
+
+main .inicio .stats{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+main .inicio .stats h3{
+    font-size: 2rem;
+    font-weight: 800;
+}
+main .inicio .stats p{
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+
+main .inicio #imgInicio img{
+    border-radius: 0.7rem;
+    border: 5px solid #ffffff;
+}
+
+
+main .sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 5rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+main .sobre .containerSobre{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+main .sobre .containerSobre .tituloSobre{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: column;
+}
+main .sobre .containerSobre .tituloSobre h2{
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.25rem;
+}
+main .sobre .containerSobre .cartoesSobre{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .sobre .containerSobre .cartoesSobre .cartao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #F1F5F9;
+    border-radius: 1rem;
+}
+main .sobre .containerSobre .cartoesSobre .cartao h3{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+main .sobre .containerSobre .cartoesSobre .cartao p{
+    font-size: 0.875rem;
+    color: #475569;
+    line-height: 1.63;
+}
+
+main .sobre .containerSobre .beneficiosSobre{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: #0A2540;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(90deg,rgba(10, 37, 64, 1) 0%, rgba(0, 102, 255, 1) 100%);
+}
+main .sobre .containerSobre .beneficiosSobre .beneficio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+main .sobre .containerSobre .beneficiosSobre .beneficio .textoBeneficio{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem
+}
+main .sobre .containerSobre .beneficiosSobre .beneficio .textoBeneficio h2{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+main .sobre .containerSobre .beneficiosSobre .beneficio .textoBeneficio p{
+    color: #DBEAFE;
+    font-size: 0.75rem;
+}
+
+main .containerEspecialidades{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #F8FAFC;
+    padding: 5rem;
+}
+
+.containerEspecialidades .containerSobre .tituloEspecialidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+.containerEspecialidades .containerSobre .tituloEspecialidades h2{
+    font-size: 2.25rem;
+    font-weight: 800;
+}
+
+.containerEspecialidades .containerSobre .especialidades{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr)
+}
+.containerEspecialidades .containerSobre .especialidades .cartaoEspecialidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    border: solid 1px #E2E8F0;
+}
+.containerEspecialidades .containerSobre .especialidades .cartaoEspecialidades h3{
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+.containerEspecialidades .containerSobre .especialidades .cartaoEspecialidades p{
+    font-size: 0.875rem;
+    color: #475569;
+    font-weight: 400;
+    line-height: 1.43;
+}
+.containerEspecialidades .containerSobre .especialidades .cartaoEspecialidades a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F6FF;
+    border-radius: 0.5rem;
+    color: #0066FF;
+    text-decoration: none;
+    padding: 10px 0px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+main .equipe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 5rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+main .equipe .containerEquipe{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+main .equipe .containerEquipe .tituloContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem
+}
+main .equipe .containerEquipe .containerCartoesEquipe{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe{
+    display: flex;
+    flex-direction: column;
+    background-color: #F8FAFC;
+    border: 1px solid  #E2E8F0;
+    border-radius: 1rem;
+}
+main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe img{
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .espacoEquipe{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1.5rem;
+}
+main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .espacoEquipe h3{
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.55;
+}
+main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .espacoEquipe .cro{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #0066FF;
+    line-height: 1.333;
+}
+main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .especialidadeEquipe{
+    color: #64748B;
+    font-size: 0.75rem;
+    line-height: 1.333;
+}
+main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .linksEquipe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .linksEquipe a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: solid 1px #E2E8F0;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .linksEquipe a:hover{
+    transform: scale(1.1);
+    background-color: ;
+}
+
+
+
+
+
