@@ -267,7 +267,7 @@ main .containerEspecialidades{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.6rem;
+    gap: 1rem;
 }
 .containerEspecialidades .containerSobre .tituloEspecialidades h2{
     font-size: 2.25rem;
@@ -313,7 +313,7 @@ main .containerEspecialidades{
     font-size: 0.875rem;
     font-weight: 600;
 }
-main .equipe{
+main .equipe, main .contato{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -324,7 +324,7 @@ main .equipe{
     font-optical-sizing: auto;
     font-style: normal;
 }
-main .equipe .containerEquipe{
+main .equipe .containerEquipe, main .contato .containerContato{
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -334,7 +334,7 @@ main .equipe .containerEquipe .tituloContainer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.25rem
+    gap: 1rem
 }
 main .equipe .containerEquipe .containerCartoesEquipe{
     display: flex;
@@ -393,7 +393,56 @@ main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .linksEquipe
 }
 main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .linksEquipe a:hover{
     transform: scale(1.1);
-    background-color: ;
+    background-color: rgb(71, 71, 71);
+}
+
+main .contato{
+    background-color: #F8FAFC;
+}
+main .contato .containerContato .textoContato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+main .contato .containerContato .containerLocalizacao{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+}
+main .contato .containerContato .containerLocalizacao .infoLocalizacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: solid 1px #E2E8F0;
+}
+main .contato .containerContato .containerLocalizacao .infoLocalizacao h3{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+main .contato .containerContato .containerLocalizacao .infoLocalizacao .cardLocalizacao{
+    display: flex;
+    gap: 1rem;
+}
+main .contato .containerContato .containerLocalizacao .infoLocalizacao .cardLocalizacao h4{
+    color: #1E293B;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+main .contato .containerContato .containerLocalizacao .infoLocalizacao .cardLocalizacao p{
+    color: #475569;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.43;
+}
+main .contato .containerContato .containerLocalizacao iframe{
+    border-radius: 1rem;
 }
 
 
