@@ -445,6 +445,60 @@ main .contato .containerContato .containerLocalizacao iframe{
     border-radius: 1rem;
 }
 
+footer{
+    background-color: #0A2540;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 2rem;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+footer #containerFooter{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+footer #containerFooter .divFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+footer #containerFooter .divFooter .tituloFooter{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.navFooter{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.navFooter a{
+    color: #94A3B8;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+.divFooter nav a{
+    display: inline-block;
+    transition: 0.2s;
+}
+.divFooter nav a:hover{
+    transform: scale(1.1);
+    color: #494949;
+}
+.divFooter h4{
+    font-size: 0.875rem;
+    font-weight: 700;
+}
 
 
 
