@@ -502,4 +502,322 @@ footer #containerFooter .divFooter .tituloFooter{
 
 
 
+/* ==========================================================================
+   MEDIA QUERY PARA DISPOSITIVOS MÓVEIS (TELAS ATÉ 768px)
+   ========================================================================== */
+/* ... Todo o seu CSS padrão (desktop) continua aqui em cima normalmente ... */
+
+/* ==========================================================================
+   MEDIA QUERY PARA DISPOSITIVOS MÓVEIS (TELAS ATÉ 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+    /* --- RESET DE SEGURANÇA CONTRA MARGEM BRANCA --- */
+    html, body {
+        overflow-x: hidden; 
+        width: 100%;
+    }
+
+    main .inicio, 
+    main .sobre, 
+    main .containerEspecialidades, 
+    main .equipe, 
+    main .contato,
+    .containerLocalizacao {
+        padding: 3rem 1rem !important; 
+        box-sizing: border-box;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    br {
+        display: none !important;
+    }
+
+    /* --- 1. HEADER (Cabeçalho) --- */
+    header {
+        height: auto;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    header .containerHeader {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+    header nav {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    header nav a {
+        font-size: 1.1rem;
+    }
+    header .botaocta, header .botaocta a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* --- 2. SEÇÃO INÍCIO (Hero Section) --- */
+    .containerInicio {
+        flex-direction: column-reverse; 
+        gap: 2.5rem;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .containerInicio .containerText {
+        align-items: center; 
+        gap: 2rem;
+        width: 100%;
+    }
+    .containerInicio .containerText h1 {
+        font-size: 2rem; 
+        line-height: 1.2;
+    }
+    .containerInicio .containerText h2 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    main .inicio #imgInicio {
+        width: 100%;
+    }
+    main .inicio #imgInicio img {
+        width: 100%; 
+        max-width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    main .inicio .buttons {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    main .inicio .buttons a {
+        width: 100% !important; 
+        box-sizing: border-box;
+    }
+
+    main .inicio .stats {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        align-items: center;
+    }
+
+    /* --- 3. SEÇÃO SOBRE (Trajetória e Cartões) --- */
+    main .sobre .containerSobre {
+        gap: 2.5rem;
+        width: 100%;
+    }
+    main .sobre .containerSobre .tituloSobre h2 {
+        font-size: 1.75rem;
+    }
+    main .sobre .containerSobre .cartoesSobre {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+    main .sobre .containerSobre .cartoesSobre .cartao {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    main .sobre .containerSobre .beneficiosSobre {
+        flex-direction: column;
+        align-items: flex-start; 
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(10, 37, 64, 1) 0%, rgba(0, 102, 255, 1) 100%); 
+        box-sizing: border-box;
+    }
+    main .sobre .containerSobre .beneficiosSobre .beneficio {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    /* --- 4. ESPECIALIDADES --- */
+    .containerEspecialidades .containerSobre .tituloEspecialidades h2 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    .containerEspecialidades .containerSobre .especialidades {
+        grid-template-columns: 1fr; 
+        width: 100%;
+    }
+    .containerEspecialidades .containerSobre .especialidades .cartaoEspecialidades {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* --- 5. EQUIPE & CORREÇÃO DOS ÍCONES (Ajustado aqui dentro!) --- */
+    main .equipe .containerEquipe {
+        width: 100%;
+        gap: 2.5rem;
+    }
+    main .equipe .containerEquipe .containerCartoesEquipe {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+    main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding-bottom: 1.5rem; 
+    }
+    
+    /* Apenas a foto do médico fica grande */
+    main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe > img:first-of-type,
+    main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe > a:first-of-type img {
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+
+    /* CORREÇÃO DOS LINKS: Cria um círculo perfeito e centraliza o ícone lá dentro */
+    main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe a {
+        display: inline-flex !important;  /* inline-flex ajuda a centralizar elementos filhos */
+        justify-content: center !important;
+        align-items: center !important;
+        width: 40px !important;            /* Força uma largura fixa idêntica à altura */
+        height: 40px !important;           /* Força uma altura fixa idêntica à largura */
+        border-radius: 50% !important;     /* Garante que o fundo/borda vire um círculo perfeito */
+        margin-right: 0.75rem;    
+        margin-top: 0.75rem; 
+        box-sizing: border-box !important;
+        padding: 0 !important;             /* Zera paddings antigos que possam distorcer a bola */
+    }
+
+    /* CORREÇÃO DAS IMAGENS: Define o tamanho exato do ícone dentro da bola */
+    main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe a img {
+        width: 20px !important;            /* Ícone ligeiramente menor que a bola (40px) */
+        height: 20px !important; 
+        object-fit: contain !important;
+        display: block !important;
+        margin: 0 !important;              /* Remove margens que empurram o ícone para o lado */
+    }
+
+    /* --- 6. LOCALIZAÇÃO E MAPA --- */
+    .containerLocalizacao {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+    .containerLocalizacao .mapa,
+    .containerLocalizacao #mapa,
+    .containerLocalizacao .mapa-container {
+        width: 100% !important;
+        height: 300px; 
+        box-sizing: border-box;
+    }
+    .containerLocalizacao iframe {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100%;
+        border-radius: 1rem;
+    }
+        /* --- 7. AJUSTE DO FOOTER (Rodapé) --- */
+    footer, .footer, main + footer {
+        padding: 3rem 1.5rem !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Força o container principal a virar uma coluna centralizada */
+    footer div, footer .container, footer .containerFooter {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 2.5rem !important;
+        width: 100% !important;
+    }
+
+    /* Ajusta o bloco da Logo e texto descritivo */
+    footer .logo, footer div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    footer p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    /* Ajusta a lista de links de Navegação */
+    footer ul, footer nav, footer .navegacao {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* CONTAINER PAI DAS REDES SOCIAIS */
+    footer .redes-sociais, footer .redes, footer div:last-child {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+
+    /* LINHA DOS ÍCONES: Força os links a ficarem um ao lado do outro na horizontal */
+    footer .redes-sociais div, 
+    footer div:last-child div,
+    footer .icones {
+        display: flex !important;
+        flex-direction: row !important; /* Lado a lado */
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        width: auto !important;
+    }
+
+    /* RECONSTRUÇÃO DOS BOTÕES SOCIAIS: Transforma o link em uma bola perfeita */
+    footer a[href*="instagram"], 
+    footer a[href*="facebook"], 
+    footer a[href*="youtube"],
+    footer .redes-sociais a,
+    footer div:last-child a {
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 44px !important;         /* Tamanho ideal para clicar com o polegar */
+        height: 44px !important;        /* Altura igual à largura para garantir o círculo */
+        background-color: rgba(255, 255, 255, 0.1) !important; /* Fundo cinza translúcido sutil */
+        border-radius: 50% !important;  /* Círculo perfeito */
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+        text-decoration: none !important;
+    }
+
+    /* AJUSTE DO TAMANHO VISUAL DOS ÍCONES LÁ DENTRO */
+    footer a[href*="instagram"] img, 
+    footer a[href*="facebook"] img, 
+    footer a[href*="youtube"] img,
+    footer .redes-sociais a img,
+    footer div:last-child a img {
+        width: 24px !important;         /* Aumentado de 20px para 24px */
+        height: 24px !important;        /* Força a proporção correta */
+        object-fit: contain !important;
+        display: block !important;
+        margin: 0 !important;           /* Remove margens antigas que causavam desalinhamento */
+    }
+
+} /* <--- Esse fechamento de chave encerra a Media Query */
 
