@@ -787,6 +787,9 @@ footer #containerFooter .divFooter .tituloFooter{
         width: auto !important;
     }
 
+    .divNone{
+        display: none !important;
+    }
     /* RECONSTRUÇÃO DOS BOTÕES SOCIAIS: Transforma o link em uma bola perfeita */
     footer a[href*="instagram"], 
     footer a[href*="facebook"], 
