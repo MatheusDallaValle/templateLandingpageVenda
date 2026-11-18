@@ -1,3 +1,15 @@
+/* Cores personalizáveis pelo config.js */
+:root {
+    --cor-principal: #0066FF;
+    --cor-secundaria: #0A2540;
+    --cor-destaque: #EEF4FE;
+    --cor-fundo-botao: #F0F6FF;
+}
+[hidden] { display: none !important; }
+.sectionTag { font-size: .75rem; color: var(--cor-principal); padding: 1rem; background-color: var(--cor-fundo-botao); border-radius: 6px; font-weight: 700; }
+.sectionDescription { font-size: 1rem; color: #475569; text-align: center; font-weight: 400; }
+.sectionTitle { font-size: 2.25rem; font-weight: 800; }
+#beneficiosLista { display: contents; }
 
 /*fontes*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -45,7 +57,7 @@ header nav a{
 }
 header nav a:hover{
     transform: scale(1.1);
-    color: #0066FF;
+    color: var(--cor-principal);
 }
 
 header .botaocta a{
@@ -55,7 +67,7 @@ header .botaocta a{
     gap: 0.2rem;
     color: black;
     text-decoration: none;
-    background-color: #0066FF;
+    background-color: var(--cor-principal);
     padding: 0.5rem;
     border-radius: 0.5rem;
     color: white;
@@ -71,7 +83,7 @@ main .inicio{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    background-color: #EEF4FE;
+    background-color: var(--cor-destaque);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,7 +127,7 @@ main .inicio .buttons a{
     transition: 0.3s;
 }
 main .inicio .buttons #button1{
-    background-color: #0066FF;
+    background-color: var(--cor-principal);
     color: #fff;
     border-radius: 1rem;
     display: flex;
@@ -129,14 +141,14 @@ main .inicio .buttons #button1:hover{
 }
 main .inicio .buttons #button2{
     background-color: #FFFFFF;
-    color: #0A2540;
+    color: var(--cor-secundaria);
     border-radius: 1rem;
     display: flex;
     justify-content: center;
 }
 main .inicio .buttons #button2:hover{
     background-color: #8d8d8d;
-    color: #0A2540;
+    color: var(--cor-secundaria);
     transform: scale(1.05);
 }
 
@@ -225,7 +237,7 @@ main .sobre .containerSobre .beneficiosSobre{
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background: #0A2540;
+    background: var(--cor-secundaria);
     padding: 3rem;
     border-radius: 1.5rem;
     background: linear-gradient(90deg,rgba(10, 37, 64, 1) 0%, rgba(0, 102, 255, 1) 100%);
@@ -305,9 +317,9 @@ main .containerEspecialidades{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F0F6FF;
+    background-color: var(--cor-fundo-botao);
     border-radius: 0.5rem;
-    color: #0066FF;
+    color: var(--cor-principal);
     text-decoration: none;
     padding: 10px 0px;
     font-size: 0.875rem;
@@ -366,7 +378,7 @@ main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .espacoEquip
 main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .espacoEquipe .cro{
     font-size: 0.75rem;
     font-weight: 600;
-    color: #0066FF;
+    color: var(--cor-principal);
     line-height: 1.333;
 }
 main .equipe .containerEquipe .containerCartoesEquipe .cartaoEquipe .especialidadeEquipe{
@@ -446,7 +458,7 @@ main .contato .containerContato .containerLocalizacao iframe{
 }
 
 footer{
-    background-color: #0A2540;
+    background-color: var(--cor-secundaria);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -824,3 +836,146 @@ footer #containerFooter .divFooter .tituloFooter{
 
 } /* <--- Esse fechamento de chave encerra a Media Query */
 
+
+/* Ajustes dos componentes criados dinamicamente */
+#beneficiosLista { display: contents; }
+.cartaoEspecialidades img { max-width: 64px; max-height: 64px; object-fit: contain; }
+.cartaoEquipe .fotoEquipe { width: 278px; max-width: 100%; object-fit: cover; }
+@media (max-width: 768px) {
+    #sobreCards, #beneficiosLista { display: flex; flex-direction: column; gap: 1rem; width: 100%; }
+    .cartaoEquipe { max-width: 100%; }
+    .sectionTitle { text-align: center; }
+}
+
+
+/* Ajustes da revisão 03: elementos de demonstração sem dados cadastrados. */
+[hidden] { display: none !important; }
+footer .tituloFooter > img {
+    width: 132px;
+    max-width: 132px;
+    height: 48px;
+    max-height: 48px;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+.redesSociaisFooter {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.redesSociaisFooter img {
+    display: block;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.redesSociaisFooter a[aria-disabled="true"] {
+    cursor: default;
+    opacity: 0.7;
+}
+.estadoVazio {
+    min-height: 150px;
+    justify-content: center !important;
+    border-style: dashed !important;
+    background: #f8fafc !important;
+}
+.estadoVazioEquipe {
+    min-width: min(100%, 280px);
+    max-width: 360px;
+    min-height: 150px;
+    justify-content: center;
+    border-style: dashed !important;
+}
+
+
+/* Menu hamburguer responsivo (Revisão 04) */
+.menuHamburguer {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.menuHamburguer span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--cor-secundaria);
+    transition: transform .2s ease, opacity .2s ease;
+}
+.menuHamburguer.ativo span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menuHamburguer.ativo span:nth-child(2) { opacity: 0; }
+.menuHamburguer.ativo span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        z-index: 1000;
+        min-height: 76px;
+        height: auto;
+        padding: .5rem 1rem;
+    }
+    header .containerHeader {
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+    }
+    header .logo img { height: 64px; max-width: 150px; object-fit: contain; }
+    .menuHamburguer { display: flex; order: 3; margin-left: auto; }
+    header nav#menuPrincipal {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        z-index: 1001;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: .5rem;
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, .14);
+    }
+    header nav#menuPrincipal.menuAberto { display: flex; }
+    header nav#menuPrincipal a {
+        display: block;
+        padding: .9rem 1rem;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+    header nav#menuPrincipal a:hover {
+        transform: none;
+        background: var(--cor-destaque);
+    }
+    header .botaocta {
+        order: 2;
+        width: auto;
+        margin-left: auto;
+    }
+    header .botaocta a {
+        width: auto;
+        padding: .65rem .75rem;
+        font-size: .85rem;
+        white-space: nowrap;
+    }
+    header .botaocta svg { width: 19px; height: 19px; }
+}
+
+@media (max-width: 380px) {
+    header .logo img { max-width: 112px; height: 56px; }
+    header .botaocta a { font-size: .75rem; padding: .55rem .6rem; }
+    header .botaocta svg { display: none; }
+}

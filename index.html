@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/inicio.css">
     <title>Carregando...</title>
 </head>
 <body>
@@ -14,17 +13,22 @@
             <div class="logo">
                 <a href="#inicio"><img id="logoHeader" src="img/logo.png" alt="logo"></a>
             </div>
-            <nav>
-                <a href="#inicio">início</a>
-                <a href="#sobre">sobre nós</a>
-                <a href="#especialidades">especialidades</a>
-                <a href="#equipe">equipe</a>
-                <a href="#contato">contato</a>
+            <button class="menuHamburguer" id="menuHamburguer" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuPrincipal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="menuPrincipal">
+                <a href="#inicio" data-nav="inicio">início</a>
+                <a href="#sobre" data-nav="sobre">sobre nós</a>
+                <a href="#especialidades" data-nav="especialidades">especialidades</a>
+                <a href="#equipe" data-nav="equipe">equipe</a>
+                <a href="#contato" data-nav="contato">contato</a>
             </nav>
             <div class="botaocta">
                 <a id="ctaHeader" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z"/></svg>
-                    agendar consulta
+                    <span id="ctaHeaderTexto">Agendar consulta</span>
                 </a>
             </div>
         </div>
@@ -38,16 +42,12 @@
                     <h2 id="heroDescricao"></h2>
                     <div class="buttons">
                         <a href="#" id="button1">
-                            agendar a sua avaliação
+                            <span id="button1Texto">Agendar uma avaliação</span>
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
                         </a>
                         <a href="#especialidades" id="button2">Nossos tratamentos</a>
                     </div>
-                    <div class="stats">
-                        <div class="info"><h3 id="statPacientes"></h3><p>Pacientes Satisfeitos</p></div>
-                        <div class="info"><h3 id="statAprovacao"></h3><p>Índice de Aprovação</p></div>
-                        <div class="info"><h3 id="statExperiencia"></h3><p>Anos de Experiência</p></div>
-                    </div>
+                    <div class="stats" id="statsContainer"></div>
                 </div>
                 <div id="imgInicio">
                     <img id="heroImagem" src="img/Dentista sorrindo e atendendo paciente.svg" alt="Clínica">
@@ -58,30 +58,21 @@
         <section class="sobre" id="sobre">
             <div class="containerSobre">
                 <div class="tituloSobre">
-                    <p style="font-size: 0.75rem; color: #0066FF; padding: 1rem; background-color: #F0F6FF; border-radius: 6px; font-weight: 700;">CONHEÇA NOSSA TRAJETÓRIA</p>
+                    <p class="sectionTag" id="sobreEtiqueta"></p>
                     <h2 id="sobreTitulo"></h2>
                     <p id="sobreDescricao" style="font-size: 1rem; color: #475569; text-align: center; font-weight: 400;"></p>
                 </div>
-                <div class="cartoesSobre">
-                    <div class="cartao"><img src="img/missao.svg" alt="missão"><h3>Nossa Missão</h3><p id="missao"></p></div>
-                    <div class="cartao"><img src="img/visao.svg" alt="visão"><h3>Nossa Visão</h3><p id="visao"></p></div>
-                    <div class="cartao"><img src="img/valor.svg" alt="valor"><h3>Nossos Valores</h3><p id="valores"></p></div>
-                </div>
-                <div class="beneficiosSobre">
-                    <div class="beneficio"><img src="img/diagnostico.svg" alt=""><div class="textoBeneficio"><h2>Diagnóstico 3D</h2><p>Exames digitais precisos sem<br>desconforto.</p></div></div>
-                    <div class="beneficio"><img src="img/humanizado.png" alt=""><div class="textoBeneficio"><h2>Atendimento Humanizado</h2><p>Foco total no conforto e calma do<br>paciente.</p></div></div>
-                    <div class="beneficio"><img src="img/biossegurança.svg" alt=""><div class="textoBeneficio"><h2>Biossegurança Rigorosa</h2><p>Esterilização e padrões<br>internacionais.</p></div></div>
-                    <div class="beneficio"><img src="img/pontualidade.svg" alt=""><div class="textoBeneficio"><h2>Pontualidade</h2><p>Respeito rigoroso aos horários<br>agendados.</p></div></div>
-                </div>
+                <div class="cartoesSobre" id="sobreCards"></div>
+                <div class="beneficiosSobre" id="beneficiosSobre"><div id="beneficiosLista"></div></div>
             </div>
         </section>
 
         <section class="containerEspecialidades" id="especialidades">
             <div class="containerSobre" style="display: flex; flex-direction: column; gap: 4rem;">
                 <div class="tituloEspecialidades">
-                    <p style="font-size: 0.75rem; color: #0066FF; padding: 1rem; background-color: #F0F6FF; border-radius: 6px; font-weight: 700;">TRATAMENTOS COMPLETOS</p>
-                    <h2>Especialidades Odontológicas</h2>
-                    <p style="font-size: 1rem; color: #475569; text-align: center; font-weight: 400;">Oferecemos tratamentos integrados utilizando os métodos mais modernos do mercado mundial.</p>
+                    <p class="sectionTag" id="especialidadesEtiqueta"></p>
+                    <h2 id="especialidadesTitulo"></h2>
+                    <p id="especialidadesDescricao" class="sectionDescription"></p>
                 </div>
                 <div class="especialidades" id="listaEspecialidades"></div>
             </div>
@@ -90,9 +81,9 @@
         <section class="equipe" id="equipe">
             <div class="containerEquipe">
                 <div class="tituloContainer">
-                    <p style="font-size: 0.75rem; color: #0066FF; padding: 1rem; background-color: #F0F6FF; border-radius: 6px; font-weight: 700;">ESPECIALISTAS RENOMADOS</p>
-                    <h2 style="font-size: 2.25rem; font-weight: 800;">Conheça Nossa Equipe Médica</h2>
-                    <p style="font-size: 1rem; color: #475569; text-align: center; font-weight: 400;">Profissionais altamente qualificados, em constante atualização internacional para cuidar de você.</p>
+                    <p class="sectionTag" id="equipeEtiqueta"></p>
+                    <h2 class="sectionTitle" id="equipeTitulo"></h2>
+                    <p class="sectionDescription" id="equipeDescricao"></p>
                 </div>
                 <div class="containerCartoesEquipe" id="listaEquipe"></div>
             </div>
@@ -101,16 +92,16 @@
         <section class="contato" id="contato">
             <div class="containerContato">
                 <div class="textoContato">
-                    <p style="font-size: 0.75rem; color: #0066FF; padding: 1rem; background-color: #F0F6FF; border-radius: 6px; font-weight: 700;">ATENDIMENTO PERSONALIZADO</p>
-                    <h2 style="font-size: 2.25rem; font-weight: 800;">Fale Conosco & Localização</h2>
-                    <p style="font-size: 1rem; color: #475569; text-align: center; font-weight: 400;">Estamos prontos para atendê-lo. Envie uma mensagem ou venha nos fazer uma visita.</p>
+                    <p class="sectionTag" id="contatoEtiqueta"></p>
+                    <h2 class="sectionTitle" id="contatoTitulo"></h2>
+                    <p class="sectionDescription" id="contatoDescricao"></p>
                 </div>
                 <div class="containerLocalizacao">
                     <div class="infoLocalizacao">
-                        <h3>Informações de Contato</h3>
-                        <div class="cardLocalizacao"><img src="img/localizacao.svg" alt="Localização"><div class="textoLocalizacao"><h4>Endereço</h4><p id="endereco"></p></div></div>
-                        <div class="cardLocalizacao"><img src="img/telefone.svg" alt="Telefone"><div class="textoLocalizacao"><h4>Telefones</h4><p id="telefone"></p></div></div>
-                        <div class="cardLocalizacao"><img src="img/horario.svg" alt="Horário"><div class="textoLocalizacao"><h4>Horário de Funcionamento</h4><p id="horario"></p></div></div>
+                        <h3 id="contatoInformacoes"></h3>
+                        <div class="cardLocalizacao"><img src="img/localizacao.svg" alt="Localização"><div class="textoLocalizacao"><h4 id="enderecoLabel"></h4><p id="endereco"></p></div></div>
+                        <div class="cardLocalizacao"><img src="img/telefone.svg" alt="Telefone"><div class="textoLocalizacao"><h4 id="telefoneLabel"></h4><p id="telefone"></p></div></div>
+                        <div class="cardLocalizacao"><img src="img/horario.svg" alt="Horário"><div class="textoLocalizacao"><h4 id="horarioLabel"></h4><p id="horario"></p></div></div>
                     </div>
                     <iframe id="mapa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
@@ -122,7 +113,7 @@
         <section id="containerFooter">
             <div class="divFooter divNone">
                 <div class="tituloFooter">
-                    <img src="img/logoFooter.svg" alt="Logo">
+                    <img id="logoFooter" src="img/logoFooter.svg" alt="Logo da clínica">
                     <h3 id="footerNome" style="font-size: 1.25rem; font-weight: 800;"></h3>
                 </div>
                 <p id="footerDescricao" style="color: #94A3B8;"></p>
@@ -130,7 +121,7 @@
             <div class="divFooter">
                 <h4>NAVEGAÇÃO</h4>
                 <nav class="navFooter">
-                    <a href="#inicio">Início</a><a href="#sobre">Sobre Nós</a><a href="#especialidades">Especialidades</a><a href="#equipe">Equipe Médica</a><a href="#contato">Contato</a>
+                    <a href="#inicio" data-nav="inicio">Início</a><a href="#sobre" data-nav="sobre">Sobre Nós</a><a href="#especialidades" data-nav="especialidades">Especialidades</a><a href="#equipe" data-nav="equipe">Equipe</a><a href="#contato" data-nav="contato">Contato</a>
                 </nav>
             </div>
             <div class="divFooter">
